@@ -11,7 +11,7 @@
 - **android系统时间一定要同步到最新的不然读写会有问题**
 - **这个库通过XXXRequest类进行读写，每次构造这个Request就会产生一个新线程，Opc的服务器负载有限，不可以太多的连接，不然会失败，所以，要通过将多个需要采集的数据合并到一个请求，这个时候就可以单独构造XXXRequest(这里面传入数组[需要读取的节点])**
 
-# 核心封装
+# 核心封装 此项目基本只需要用到OpcManager.kt, 其他的都java代码是从OpcuaDemo 拷贝过来的，可能有一点改动（？...不确定）
 ```kotlin
 package com.opc.demo.OpcUtils
 
